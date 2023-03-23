@@ -1,2 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="en">
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Political</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+<head>
+<body>
+<ion-app>
+    <ion-header>
+        <ion-toolbar color="tertiary">
+            <ion-title position="center">
+                Educate Today! 
+            </ion-title>
+        </ion-toolbar>
+    
+      </ion-header>
+       
+      
+    <ion-content >    
+ <ion-item>
+
+  <ion-segment value="Topics">
+    <ion-segment-button id="btn-environment">
+    <ion-label color="primary">Environment</ion-label>
+  </ion-segment-button>
+  <ion-segment-button id="btn-politics">
+    <ion-label color="primary">Politics</ion-label>
+  </ion-segment-button>
+  <ion-segment-button id="btn-socialMedia">
+    <ion-label color="primary">Social Media</ion-label>
+  </ion-segment-button>
+  <ion-segment-button id="btn-feminism">
+    <ion-label color="primary">Feminism</ion-label>
+  </ion-segment-button>
+  </ion-segment>
+ </ion-item>
+
+<ion-item>
+<ion-label id="lbl-output"></ion-label>
+</ion-item>
+
+</ion-content>
+
+
+<ion-footer >
+    <ion-toolbar>
+        <ion-tabs>
+            <ion-router-outlet></ion-router-outlet>
+            <ion-tab-bar slot="bottom" color="primary">
+                <ion-tab-button tab="home">
+                  <ion-icon name="home-outline" ></ion-icon>
+                  Home
+                </ion-tab-button>
+                <ion-tab-button tab="school">
+                  <ion-icon name="school-outline" ></ion-icon>
+                  Educate
+                </ion-tab-button>
+                <ion-tab-button tab="earth">
+                  <ion-icon name="earth-outline"></ion-icon>
+                  World News
+                </ion-tab-button>
+                <ion-tab-button tab="star">
+                  <ion-icon name="star-outline"></ion-icon>
+                  Donate
+                </ion-tab-button>
+              </ion-tab-bar>
+            </ion-tabs>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>
+<script src="educational.js"></script>
+</body>
+
+
+</head>
