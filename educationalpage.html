@@ -40,9 +40,17 @@
  </ion-item>
 
 <ion-item>
-<ion-label id="lbl-output"></ion-label>
-</ion-item>
+  <ion-card>
+    <ion-card-subtitle color="tertiary">
+      <ion-label id="lbl-output"></ion-label>
+</ion-card-subtitle>
+<ion-card-content>
+  <ion-text id="text-output"></ion-text>
+</ion-card-content>
+</ion-card>
 
+</ion-item>
+<ion-img src="environment.jfif" alt="environment" width="100" height="100" position="center"></ion-img>
 </ion-content>
 
 
@@ -74,6 +82,17 @@
 </ion-app>
 <script src="educational.js"></script>
 </body>
-
+<style>
+  ion-img {
+  width: 50%;
+  height: 50%;
+  position:absolute;
+  left:0;
+  right:0;
+  margin:0 auto;
+  
+  
+}
+</style>
 
 </head>
