@@ -10,80 +10,80 @@
 <head>
 <body>
 <ion-app>
-
+  <ion-nav root="home-page"></ion-nav>
 
     <ion-header>
         <ion-toolbar color="tertiary">
             <ion-title position="center">
-                Welcome 
+              <ion-label id="lbl-output"></ion-label>
             </ion-title>
         </ion-toolbar>
     </ion-header>
 
-<ion-content>
-        <ion-card>
-            <ion-card-header>
-              <ion-card-title color="tertiary">GET POLITICAL</ion-card-title>
-              <ion-card-subtitle color="secondary">What our app does</ion-card-subtitle>
+<ion-content id="content-output">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="tertiary">GET POLITICAL</ion-card-title>
+      <ion-card-subtitle color="secondary">What our app does</ion-card-subtitle>
+  
+    </ion-card-header>
+  
+    <ion-card-content>
+        Hello! Welcome to Get Political, we are so glad you have decided to join us on educating the world on the recent social troubles we are facing.
+        Our app will let you choose a topic each day that you can read about and see all the latest news and headlines that interest you. We also have a donation page where you
+        can donate to organisations that need it the most.
+    </ion-card-content>
+  </ion-card>
+  
+  
+  <img src="homepage3.jfif" alt="homepagelogo" width="350" height="150"> 
+  
     
-            </ion-card-header>
-     
-            <ion-card-content>
-                Hello! Welcome to Get Political, we are so glad you have decided to join us on educating the world on the recent social troubles we are facing.
-                Our app will let you choose a topic each day that you can read about and see all the latest news and headlines that interest you. We also have a donation page where you
-                can donate to organisations that need it the most.
-            </ion-card-content>
-        </ion-card>
-
-      
-          <img src="homepage3.jfif" alt="homepagelogo" width="350" height="150"> 
-        
-            
-        
-        <ion-card>
-            <ion-card-header>
-              <ion-card-title color="tertiary">OUR AIM</ion-card-title>
-              <ion-card-subtitle color="secondary">why we created this app</ion-card-subtitle>
-            </ion-card-header>
-           
-            <ion-card-content>
-                    Get Political is a vital part of throwing away the stigma around conversations about the environmental and social issues we face everyday in the world. 
-                    If we start educating today, we can hold the dsicussion tommorrow and each day after, to help everyone around you learn new things and grow their knowledge.
-            </ion-card-content>
-        </ion-card>
-
-             <script src="homepage.js"></script>
-
-        </ion-content>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="tertiary">OUR AIM</ion-card-title>
+      <ion-card-subtitle color="secondary">why we created this app</ion-card-subtitle>
+    </ion-card-header>
+   
+    <ion-card-content>
+            Get Political is a vital part of throwing away the stigma around conversations about the environmental and social issues we face everyday in the world. 
+            If we start educating today, we can hold the dsicussion tommorrow and each day after, to help everyone around you learn new things and grow their knowledge.
+    </ion-card-content>
+  </ion-card>
+</ion-content>
    
         <ion-footer >
             <ion-toolbar>
                 <ion-tabs>
-                    <ion-router-outlet></ion-router-outlet>
-                    <ion-tab-bar slot="bottom" color="primary">
-                        <ion-tab-button tab="home">
-                          <ion-icon name="home-outline" ></ion-icon>
-                          Home
-                        </ion-tab-button>
-                        <ion-tab-button tab="school">
-                          <ion-icon name="school-outline" ></ion-icon>
-                          Educate
-                        </ion-tab-button>
-                        <ion-tab-button tab="earth">
-                          <ion-icon name="earth-outline"></ion-icon>
-                          World News
-                        </ion-tab-button>
-                        <ion-tab-button tab="star">
-                          <ion-icon name="star-outline"></ion-icon>
-                          Donate
-                        </ion-tab-button>
-                      </ion-tab-bar>
-                    </ion-tabs>
+                  <ion-item>
+
+                    <ion-segment value="Pages">
+                      <ion-segment-button id="btn-home">
+                        <ion-icon name="home-outline" color="primary" ></ion-icon>
+                      <ion-label color="primary">Home</ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button id="btn-account">
+                      <ion-icon name="person-outline" color="primary"></ion-icon>
+                      <ion-label color="primary">Account</ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button id="btn-educate">
+                      <ion-icon name="school-outline" color="primary"></ion-icon>
+                      <ion-label color="primary">Educate</ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button id="btn-worldNews">
+                      <ion-icon name="earth-outline" color="primary"></ion-icon>
+                      <ion-label color="primary">World News</ion-label>
+                    
+                    </ion-segment-button>
+                    </ion-segment>
+                   </ion-item>
+                </ion-tabs>
             </ion-toolbar>
           </ion-footer>
               
             
-
+<script src="homepage.js"></script>
 </ion-app>
 </body>
 <style>

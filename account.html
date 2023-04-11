@@ -9,6 +9,7 @@
 <head>
 <body>
 <ion-app>
+  
     <ion-header>
         <ion-toolbar color="tertiary">
             <ion-title >
@@ -66,35 +67,40 @@
                 </ion-card-content>
                  
             </ion-card>
+            
       </ion-content>
 
       <ion-footer >
         <ion-toolbar>
-            <ion-tabs>
-                <ion-router-outlet></ion-router-outlet>
-                <ion-tab-bar slot="bottom" color="primary">
-                    <ion-tab-button tab="home">
-                      <ion-icon name="home-outline" ></ion-icon>
-                      Home
-                    </ion-tab-button>
-                    <ion-tab-button tab="school">
-                      <ion-icon name="school-outline" ></ion-icon>
-                      Educate
-                    </ion-tab-button>
-                    <ion-tab-button tab="earth">
-                      <ion-icon name="earth-outline"></ion-icon>
-                      World News
-                    </ion-tab-button>
-                    <ion-tab-button tab="star">
-                      <ion-icon name="star-outline"></ion-icon>
-                      Donate
-                    </ion-tab-button>
-                  </ion-tab-bar>
-                </ion-tabs>
-        </ion-toolbar>
+          <ion-tabs>
+            <ion-item>
+
+              <ion-segment value="Pages">
+                <ion-segment-button id="btn-home">
+                  <ion-icon name="home-outline" color="primary" ></ion-icon>
+                <ion-label color="primary">Home</ion-label>
+              </ion-segment-button>
+              <ion-segment-button id="btn-account">
+                <ion-icon name="person-outline" color="primary"></ion-icon>
+                <ion-label color="primary">Account</ion-label>
+              </ion-segment-button>
+              <ion-segment-button id="btn-educate">
+                <ion-icon name="school-outline" color="primary"></ion-icon>
+                <ion-label color="primary">Educate</ion-label>
+              </ion-segment-button>
+              <ion-segment-button id="btn-worldNews">
+                <ion-icon name="earth-outline" color="primary"></ion-icon>
+                <ion-label color="primary">World News</ion-label>
+              
+              </ion-segment-button>
+              </ion-segment>
+             </ion-item>
+          </ion-tabs>
+      </ion-toolbar>
       </ion-footer>
 </ion-app>
 <script src="account.js"></script>
+<script src="homepage.js"></script>
 </body>
 <style>
   ion-img{

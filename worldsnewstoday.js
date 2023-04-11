@@ -1,25 +1,39 @@
-const apiEndpointURL = 'https://api.worldnewsapi.com/search-news';
-
-fetch(apiEndpointURL)
-.then(getData)
-.catch(reportError);
-
-async function getData(aResponse){
-    const data = await aResponse.json();
-    console.log(data)
-    return data;
-}
-
-
-fetch getDetails(){
-    const news = "https://api.worldnewsapi.com/search-news";
-    fetch(news).then(getJson).then(updateDisplay).catch(reportError);
-}
-
-function getJson(aResponse){
-    return aResponse.json();
-}
-
-function reportError(anError){
-    console.log(anError);
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const newsList = document.getElementById('news-list');
+    
+    fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=b6cf7e6c110f4650a99cf96397854fef')
+      .then(response => response.json())
+      .then(data => {
+        data.articles.forEach(article => {
+          const newsItem = document.createElement('ion-item');
+  
+          const newsImage = document.createElement('ion-thumbnail');
+          const image = document.createElement('img');
+          image.src = article.urlToImage;
+          newsImage.appendChild(image);
+          newsItem.appendChild(newsImage);
+  
+          const newsContent = document.createElement('ion-label');
+          newsContent.className = 'news-content';
+  
+          const newsTitle = document.createElement('h2');
+          newsTitle.textContent = article.title;
+          newsContent.appendChild(newsTitle);
+  
+          const newsDescription = document.createElement('p');
+          newsDescription.textContent = article.description;
+          newsContent.appendChild(newsDescription);
+  
+          const newsUrl = document.createElement('a');
+          newsUrl.href = article.url;
+          newsUrl.textContent = article.url;
+          newsUrl.target = '_blank';
+          newsContent.appendChild(newsUrl);
+  
+          newsItem.appendChild(newsContent);
+          newsList.appendChild(newsItem);
+        });
+      })
+      .catch(error => console.error('Error fetching news data:', error));
+  });
+  
