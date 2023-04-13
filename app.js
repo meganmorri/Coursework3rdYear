@@ -173,6 +173,7 @@ customElements.define('page-three', class extends HTMLElement {
                       </ion-item>
                       <ion-item>
                         <ion-label position="stacked">Email Address</ion-label>
+                        
                          <ion-input placeholder="Enter text"></ion-input>
                       </ion-item>
                       <ion-item>
@@ -239,17 +240,14 @@ customElements.define('page-four', class extends HTMLElement {
         </ion-toolbar>
     
       </ion-header>
-
-      <ion-content>
-      <ion-card>
-      <ion-card-title>Top Headlines</ion-card-title>
-    </ion-card>
-    
-   
+        <ion-card>
+        <ion-card-title>Top Headlines</ion-card-title>
+      </ion-card>
+      
         <ion-card>
         <ion-card-content>
-        <ion-list id="news-list"></ion-list>
-        <iframe src="./worldnewstoday.html" width="100%" height="500" frameBorder="0"></iframe>
+        
+        <iframe src="./worldsnewstoday.html" width="100%" height="500" frameBorder="0"></iframe>
         </ion-card-content>
         </ion-card> 
         </ion-content>
@@ -259,7 +257,7 @@ customElements.define('page-four', class extends HTMLElement {
            </footer>
         `;
         const scriptTag = document.createElement('script');
-        scriptTag.src = 'worldnewstoday.js';
+        scriptTag.src = 'worldsnewstoday.js';
         document.head.appendChild(scriptTag);
     }
 });
