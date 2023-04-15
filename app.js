@@ -8,6 +8,7 @@ customElements.define('page-one', class extends HTMLElement {
                 Homepage! 
             </ion-title>
         </ion-toolbar>
+       
     </ion-header>
 
 <ion-content id="content-output">
@@ -61,8 +62,11 @@ customElements.define('page-two', class extends HTMLElement {
             <ion-title position="center">
                 Educate Today! 
             </ion-title>
-        </ion-toolbar>
-    
+        
+        <ion-buttons>
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    </ion-toolbar>
       </ion-header>
        
       
@@ -134,17 +138,23 @@ customElements.define('page-three', class extends HTMLElement {
         this.innerHTML = `
         <ion-header>
         <ion-toolbar color="tertiary">
+        
             <ion-title >
                 My Profile 
             </ion-title>
-        </ion-toolbar>
+            
        
+        <ion-buttons>
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    </ion-toolbar>
       </ion-header>
 
       <ion-content>
-        <ion-img src="account.jfif" alt="profilePicture"></ion-img>
+        
        <ion-card>
         <ion-card-title color="tertiary">Login</ion-card-title>
+        
             <ion-item>
                 <ion-label position="floating">Enter your name</ion-label>
                 
@@ -237,8 +247,11 @@ customElements.define('page-four', class extends HTMLElement {
             <ion-title position="center">
                 World News! 
             </ion-title>
-        </ion-toolbar>
-    
+        <ion-buttons>
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    </ion-toolbar>
       </ion-header>
         <ion-card>
         <ion-card-title>Top Headlines</ion-card-title>
